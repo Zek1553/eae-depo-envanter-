@@ -1,0 +1,9 @@
+{
+  "name": "depo-envanter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QR ile stok cikis takip uygulamasi",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

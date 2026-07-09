@@ -1,0 +1,568 @@
+{
+  "meta": {
+    "appName": "Depo Envanter",
+    "adminPin": "1234",
+    "sourceWorkbook": "Depo Envanter Sayımı.xlsx",
+    "createdAt": "2026-07-09T11:00:32.375Z"
+  },
+  "items": [
+    {
+      "id": "bardak-termos-grubu-termos-qr-musteri",
+      "name": "Termos QR - Müşteri",
+      "category": "Bardak & Termos Grubu",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "bardak-termos-grubu-termos-qr-kodsuz-ik-siyah",
+      "name": "Termos QR Kodsuz (İK) Siyah",
+      "category": "Bardak & Termos Grubu",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "cantalar-karton-poset",
+      "name": "Karton Poşet",
+      "category": "Çantalar",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "cantalar-naylon-poset",
+      "name": "Naylon Poşet",
+      "category": "Çantalar",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "defterler-defter-kirmizi-en",
+      "name": "Defter Kırmızı EN",
+      "category": "Defterler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "defterler-defter-kirmizi-tr",
+      "name": "Defter Kırmızı TR",
+      "category": "Defterler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "defterler-defter-siyah-tr",
+      "name": "Defter Siyah TR",
+      "category": "Defterler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "defterler-dimko-defter",
+      "name": "DIMKO Defter",
+      "category": "Defterler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "defterler-ex-proof-defter",
+      "name": "Ex-Proof Defter",
+      "category": "Defterler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "defterler-yeni-defter",
+      "name": "Yeni Defter",
+      "category": "Defterler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "elektronik-urunler-powerbank",
+      "name": "Powerbank",
+      "category": "Elektronik Ürünler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "elektronik-urunler-powerbank-cif-kollu",
+      "name": "Powerbank - Çif Kollu",
+      "category": "Elektronik Ürünler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "elektronik-urunler-usb-bellek",
+      "name": "USB Bellek",
+      "category": "Elektronik Ürünler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kalemler-kalem-beyaz-tr",
+      "name": "Kalem Beyaz TR",
+      "category": "Kalemler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kalemler-kalem-kirmizi-en",
+      "name": "Kalem Kırmızı EN",
+      "category": "Kalemler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kalemler-kalem-kirmizi-plastik-tr",
+      "name": "Kalem Kırmızı Plastik TR",
+      "category": "Kalemler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kalemler-kalem-kirmizi-tr",
+      "name": "Kalem Kırmızı TR",
+      "category": "Kalemler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kalemler-zenit-kalem-beyaz-tr",
+      "name": "Zenit Kalem Beyaz TR",
+      "category": "Kalemler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "bardak-termos-grubu-kupa-bardak",
+      "name": "Data Center Kataloğu - EN",
+      "category": "Katalog",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-endustriyel-en",
+      "name": "Endüstriyel Kataloğu - EN",
+      "category": "Katalog",
+      "stock": 47,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-endustriyel-tr",
+      "name": "Endüstriyel Kataloğu - TR",
+      "category": "Katalog",
+      "stock": 199,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-ex-proof-en",
+      "name": "Exproof Kataloğu - EN",
+      "category": "Katalog",
+      "stock": 19,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-ex-proof-tr",
+      "name": "Exproof Kataloğu - TR",
+      "category": "Katalog",
+      "stock": 70,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-infinoo-en",
+      "name": "İnfinoo Kataloğu - EN",
+      "category": "Katalog",
+      "stock": 309,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-mimari-en",
+      "name": "Mimari Çözümler Kataloğu - EN",
+      "category": "Katalog",
+      "stock": 175,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "bardak-termos-grubu-1-adet-termos",
+      "name": "Mimari Çözümler Kataloğu - TR",
+      "category": "Katalog",
+      "stock": 63,
+      "minimumStock": 15,
+      "active": true
+    },
+    {
+      "id": "katalog-mimari-tr",
+      "name": "Mimari TR",
+      "category": "Katalog",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "bardak-termos-grubu-kirmizi-termos",
+      "name": "Yüzey Kontrol Kataloğu - EN",
+      "category": "Katalog",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "bardak-termos-grubu-bardak-altligi",
+      "name": "Yüzey Kontrol Kataloğu - TR",
+      "category": "Katalog",
+      "stock": 12,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kurumsal-hediye-setleri-bambu-set",
+      "name": "Bambu Set",
+      "category": "Kurumsal Hediye Setleri",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kurumsal-hediye-setleri-hugo-boss-set",
+      "name": "Hugo Boss Set",
+      "category": "Kurumsal Hediye Setleri",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "mouse-pad-masa-ustu-urunleri-mouse-pad-siyah-en",
+      "name": "Mouse Pad Siyah EN",
+      "category": "Mouse Pad & Masa Üstü Ürünleri",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    }
+  ],
+  "transactions": [
+    {
+      "id": "03b2f18f-01ed-40af-8bfb-c56148885e5e",
+      "createdAt": "2026-07-09T11:16:38.958Z",
+      "type": "set",
+      "itemId": "bardak-termos-grubu-1-adet-termos",
+      "itemName": "Mimari Çözümler Kataloğu - TR",
+      "category": "Katalog",
+      "quantity": 64,
+      "person": "Yönetici",
+      "recipient": "",
+      "location": "",
+      "note": "Stok elle güncellendi",
+      "balanceAfter": 64
+    },
+    {
+      "id": "1af5b1f6-5b84-4ad6-ac6d-a6dd4896e60d",
+      "createdAt": "2026-07-09T11:17:15.988Z",
+      "type": "set",
+      "itemId": "katalog-mimari-en",
+      "itemName": "Mimari Çözümler Kataloğu - EN",
+      "category": "Katalog",
+      "quantity": 176,
+      "person": "Yönetici",
+      "recipient": "",
+      "location": "",
+      "note": "Stok elle güncellendi",
+      "balanceAfter": 176
+    },
+    {
+      "id": "9b67cbca-8ec0-4e5c-9ff3-b1f650b2005b",
+      "createdAt": "2026-07-09T11:18:01.321Z",
+      "type": "set",
+      "itemId": "bardak-termos-grubu-bardak-altligi",
+      "itemName": "Yüzey Kontrol Kataloğu - TR",
+      "category": "Katalog",
+      "quantity": 13,
+      "person": "Yönetici",
+      "recipient": "",
+      "location": "",
+      "note": "Stok elle güncellendi",
+      "balanceAfter": 13
+    },
+    {
+      "id": "57a29399-7286-4eb8-8967-6032256e6784",
+      "createdAt": "2026-07-09T11:19:01.181Z",
+      "type": "set",
+      "itemId": "katalog-ex-proof-tr",
+      "itemName": "Exproof Kataloğu - TR",
+      "category": "Katalog",
+      "quantity": 71,
+      "person": "Yönetici",
+      "recipient": "",
+      "location": "",
+      "note": "Stok elle güncellendi",
+      "balanceAfter": 71
+    },
+    {
+      "id": "00ecd1a7-8c03-4ba3-b549-36cb6d5780ec",
+      "createdAt": "2026-07-09T11:19:17.057Z",
+      "type": "set",
+      "itemId": "katalog-ex-proof-en",
+      "itemName": "Exproof Kataloğu - EN",
+      "category": "Katalog",
+      "quantity": 20,
+      "person": "Yönetici",
+      "recipient": "",
+      "location": "",
+      "note": "Stok elle güncellendi",
+      "balanceAfter": 20
+    },
+    {
+      "id": "df608658-a61c-45ba-9fdf-b6446c0bb577",
+      "createdAt": "2026-07-09T11:20:03.344Z",
+      "type": "set",
+      "itemId": "bardak-termos-grubu-kupa-bardak",
+      "itemName": "Data Center Kataloğu - EN",
+      "category": "Katalog",
+      "quantity": 1,
+      "person": "Yönetici",
+      "recipient": "",
+      "location": "",
+      "note": "Stok elle güncellendi",
+      "balanceAfter": 1
+    },
+    {
+      "id": "b50783f3-18bd-41d8-94bf-9a645e2d5c9c",
+      "createdAt": "2026-07-09T11:20:36.974Z",
+      "type": "set",
+      "itemId": "katalog-endustriyel-en",
+      "itemName": "Endüstriyel Ürünler - EN",
+      "category": "Katalog",
+      "quantity": 48,
+      "person": "Yönetici",
+      "recipient": "",
+      "location": "",
+      "note": "Stok elle güncellendi",
+      "balanceAfter": 48
+    },
+    {
+      "id": "f28c0100-114d-404f-af7b-ebb9fab68349",
+      "createdAt": "2026-07-09T11:20:52.043Z",
+      "type": "set",
+      "itemId": "katalog-endustriyel-tr",
+      "itemName": "Endüstriyel Ürünler - TR",
+      "category": "Katalog",
+      "quantity": 200,
+      "person": "Yönetici",
+      "recipient": "",
+      "location": "",
+      "note": "Stok elle güncellendi",
+      "balanceAfter": 200
+    },
+    {
+      "id": "9930f116-44c6-43a7-8f8b-9847ffd48f24",
+      "createdAt": "2026-07-09T11:22:30.007Z",
+      "type": "set",
+      "itemId": "katalog-infinoo-en",
+      "itemName": "İnfinoo Kataloğu - EN",
+      "category": "Katalog",
+      "quantity": 310,
+      "person": "Yönetici",
+      "recipient": "",
+      "location": "",
+      "note": "Stok elle güncellendi",
+      "balanceAfter": 310
+    },
+    {
+      "id": "5ae23ebf-e75d-4cea-8913-10c341163920",
+      "createdAt": "2026-07-09T11:27:03.811Z",
+      "type": "out",
+      "itemId": "bardak-termos-grubu-kupa-bardak",
+      "itemName": "Data Center Kataloğu - EN",
+      "category": "Katalog",
+      "quantity": 1,
+      "person": "ZEKİ AYDIN",
+      "recipient": "MÜŞTERİ",
+      "location": "İkitelli",
+      "note": "TEST",
+      "balanceAfter": 0
+    },
+    {
+      "id": "36ceacc8-d0ea-4be5-930d-adc3aa43f8ba",
+      "createdAt": "2026-07-09T11:27:03.811Z",
+      "type": "out",
+      "itemId": "bardak-termos-grubu-bardak-altligi",
+      "itemName": "Yüzey Kontrol Kataloğu - TR",
+      "category": "Katalog",
+      "quantity": 1,
+      "person": "ZEKİ AYDIN",
+      "recipient": "MÜŞTERİ",
+      "location": "İkitelli",
+      "note": "TEST",
+      "balanceAfter": 12
+    },
+    {
+      "id": "c196eed6-ce43-442c-afdd-487171a8c726",
+      "createdAt": "2026-07-09T11:27:03.811Z",
+      "type": "out",
+      "itemId": "katalog-endustriyel-en",
+      "itemName": "Endüstriyel Kataloğu - EN",
+      "category": "Katalog",
+      "quantity": 1,
+      "person": "ZEKİ AYDIN",
+      "recipient": "MÜŞTERİ",
+      "location": "İkitelli",
+      "note": "TEST",
+      "balanceAfter": 47
+    },
+    {
+      "id": "a2de36af-55e8-4a74-b4f6-d075a1ba342a",
+      "createdAt": "2026-07-09T11:27:03.811Z",
+      "type": "out",
+      "itemId": "katalog-endustriyel-tr",
+      "itemName": "Endüstriyel Kataloğu - TR",
+      "category": "Katalog",
+      "quantity": 1,
+      "person": "ZEKİ AYDIN",
+      "recipient": "MÜŞTERİ",
+      "location": "İkitelli",
+      "note": "TEST",
+      "balanceAfter": 199
+    },
+    {
+      "id": "46568004-7728-4523-917d-e2bac2d1622c",
+      "createdAt": "2026-07-09T11:27:03.811Z",
+      "type": "out",
+      "itemId": "katalog-ex-proof-en",
+      "itemName": "Exproof Kataloğu - EN",
+      "category": "Katalog",
+      "quantity": 1,
+      "person": "ZEKİ AYDIN",
+      "recipient": "MÜŞTERİ",
+      "location": "İkitelli",
+      "note": "TEST",
+      "balanceAfter": 19
+    },
+    {
+      "id": "b59255d4-377f-481e-85b6-843f10f6da0a",
+      "createdAt": "2026-07-09T11:27:03.811Z",
+      "type": "out",
+      "itemId": "katalog-ex-proof-tr",
+      "itemName": "Exproof Kataloğu - TR",
+      "category": "Katalog",
+      "quantity": 1,
+      "person": "ZEKİ AYDIN",
+      "recipient": "MÜŞTERİ",
+      "location": "İkitelli",
+      "note": "TEST",
+      "balanceAfter": 70
+    },
+    {
+      "id": "9cfaec93-c985-4deb-a9f3-bc9df227be54",
+      "createdAt": "2026-07-09T11:27:03.811Z",
+      "type": "out",
+      "itemId": "katalog-infinoo-en",
+      "itemName": "İnfinoo Kataloğu - EN",
+      "category": "Katalog",
+      "quantity": 1,
+      "person": "ZEKİ AYDIN",
+      "recipient": "MÜŞTERİ",
+      "location": "İkitelli",
+      "note": "TEST",
+      "balanceAfter": 309
+    },
+    {
+      "id": "ed3c5fba-2c93-4a1e-a9cf-454af6ea0893",
+      "createdAt": "2026-07-09T11:27:03.811Z",
+      "type": "out",
+      "itemId": "katalog-mimari-en",
+      "itemName": "Mimari Çözümler Kataloğu - EN",
+      "category": "Katalog",
+      "quantity": 1,
+      "person": "ZEKİ AYDIN",
+      "recipient": "MÜŞTERİ",
+      "location": "İkitelli",
+      "note": "TEST",
+      "balanceAfter": 175
+    },
+    {
+      "id": "7922fad7-4c28-4668-a9bb-866b0854219e",
+      "createdAt": "2026-07-09T11:27:03.811Z",
+      "type": "out",
+      "itemId": "bardak-termos-grubu-1-adet-termos",
+      "itemName": "Mimari Çözümler Kataloğu - TR",
+      "category": "Katalog",
+      "quantity": 1,
+      "person": "ZEKİ AYDIN",
+      "recipient": "MÜŞTERİ",
+      "location": "İkitelli",
+      "note": "TEST",
+      "balanceAfter": 63
+    }
+  ],
+  "people": [
+    "Ali Demir",
+    "Ali İmran Çataklı",
+    "Buğra Öztürk",
+    "Faruk Bastıkoğlu",
+    "Koray Timur",
+    "Mehmet Emin Korkmaz",
+    "Ömer Polat",
+    "Samet Tabakçı",
+    "ZEKİ AYDIN"
+  ],
+  "locations": [
+    "DL2",
+    "İkitelli"
+  ],
+  "recipients": [
+    "Ahmet Turan",
+    "Ali demir",
+    "Ali Demir",
+    "Arda Soydaner",
+    "Arzu",
+    "Arzu Yanık",
+    "Atilla Bey IT",
+    "Begüm Gökcan",
+    "Faruk BASTIKOĞLU",
+    "Faruk Bastikoğlu",
+    "Furkan Ceco",
+    "Gülbeden Hanım",
+    "Hüseyin Kocabaş",
+    "Libya Misafir",
+    "Mercedes",
+    "Metal-X İnşaat,Sanayi,Lojistik",
+    "Muhammed Karagöz",
+    "Müşteri",
+    "MÜŞTERİ",
+    "Ömer polat",
+    "Ömer Polat",
+    "Rasih Atasoy",
+    "Rasih Sefa ATASOY",
+    "Salih Kaplan",
+    "Satış Teknik Destek",
+    "Sedat Bey",
+    "Sinan Şahin",
+    "Talip Deniz",
+    "Test",
+    "Vehbi Koşucu",
+    "Zafer Kaçır"
+  ]
+}

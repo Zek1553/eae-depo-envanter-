@@ -1,0 +1,328 @@
+{
+  "meta": {
+    "appName": "Depo Envanter",
+    "adminPin": "1234",
+    "sourceWorkbook": "Envanter Takip Formu(1-41).xlsx",
+    "createdAt": "2026-07-09T11:00:32.375Z"
+  },
+  "items": [
+    {
+      "id": "bardak-termos-grubu-1-adet-termos",
+      "name": "1 adet termos",
+      "category": "Bardak & Termos Grubu",
+      "stock": 2,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "bardak-termos-grubu-bardak-altligi",
+      "name": "Bardak Altlığı",
+      "category": "Bardak & Termos Grubu",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "bardak-termos-grubu-kirmizi-termos",
+      "name": "Kırmızı Termos",
+      "category": "Bardak & Termos Grubu",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "bardak-termos-grubu-kupa-bardak",
+      "name": "Kupa Bardak",
+      "category": "Bardak & Termos Grubu",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "bardak-termos-grubu-termos-qr-musteri",
+      "name": "Termos QR - Müşteri",
+      "category": "Bardak & Termos Grubu",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "bardak-termos-grubu-termos-qr-kodsuz-ik-siyah",
+      "name": "Termos QR Kodsuz (İK) Siyah",
+      "category": "Bardak & Termos Grubu",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "cantalar-karton-poset",
+      "name": "Karton Poşet",
+      "category": "Çantalar",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "cantalar-naylon-poset",
+      "name": "Naylon Poşet",
+      "category": "Çantalar",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "defterler-defter-kirmizi-en",
+      "name": "Defter Kırmızı EN",
+      "category": "Defterler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "defterler-defter-kirmizi-tr",
+      "name": "Defter Kırmızı TR",
+      "category": "Defterler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "defterler-defter-siyah-tr",
+      "name": "Defter Siyah TR",
+      "category": "Defterler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "defterler-dimko-defter",
+      "name": "DIMKO Defter",
+      "category": "Defterler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "defterler-ex-proof-defter",
+      "name": "Ex-Proof Defter",
+      "category": "Defterler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "defterler-yeni-defter",
+      "name": "Yeni Defter",
+      "category": "Defterler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "elektronik-urunler-powerbank",
+      "name": "Powerbank",
+      "category": "Elektronik Ürünler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "elektronik-urunler-powerbank-cif-kollu",
+      "name": "Powerbank - Çif Kollu",
+      "category": "Elektronik Ürünler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "elektronik-urunler-usb-bellek",
+      "name": "USB Bellek",
+      "category": "Elektronik Ürünler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kalemler-kalem-beyaz-tr",
+      "name": "Kalem Beyaz TR",
+      "category": "Kalemler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kalemler-kalem-kirmizi-en",
+      "name": "Kalem Kırmızı EN",
+      "category": "Kalemler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kalemler-kalem-kirmizi-plastik-tr",
+      "name": "Kalem Kırmızı Plastik TR",
+      "category": "Kalemler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kalemler-kalem-kirmizi-tr",
+      "name": "Kalem Kırmızı TR",
+      "category": "Kalemler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kalemler-zenit-kalem-beyaz-tr",
+      "name": "Zenit Kalem Beyaz TR",
+      "category": "Kalemler",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-endustriyel-en",
+      "name": "Endüstriyel EN",
+      "category": "Katalog",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-endustriyel-tr",
+      "name": "Endüstriyel TR",
+      "category": "Katalog",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-ex-proof-en",
+      "name": "Ex-Proof EN",
+      "category": "Katalog",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-ex-proof-tr",
+      "name": "Ex-Proof TR",
+      "category": "Katalog",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-infinoo-en",
+      "name": "Infinoo EN",
+      "category": "Katalog",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-mimari-en",
+      "name": "Mimari EN",
+      "category": "Katalog",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "katalog-mimari-tr",
+      "name": "Mimari TR",
+      "category": "Katalog",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kurumsal-hediye-setleri-bambu-set",
+      "name": "Bambu Set",
+      "category": "Kurumsal Hediye Setleri",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "kurumsal-hediye-setleri-hugo-boss-set",
+      "name": "Hugo Boss Set",
+      "category": "Kurumsal Hediye Setleri",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    },
+    {
+      "id": "mouse-pad-masa-ustu-urunleri-mouse-pad-siyah-en",
+      "name": "Mouse Pad Siyah EN",
+      "category": "Mouse Pad & Masa Üstü Ürünleri",
+      "stock": 0,
+      "minimumStock": 0,
+      "active": true
+    }
+  ],
+  "transactions": [
+    {
+      "id": "06848322-20d6-4084-834c-09307e679b90",
+      "createdAt": "2026-07-09T11:07:58.178Z",
+      "type": "set",
+      "itemId": "bardak-termos-grubu-1-adet-termos",
+      "itemName": "1 adet termos",
+      "category": "Bardak & Termos Grubu",
+      "quantity": 2,
+      "person": "Yönetici",
+      "recipient": "",
+      "location": "",
+      "note": "Stok elle güncellendi",
+      "balanceAfter": 2
+    }
+  ],
+  "people": [
+    "Ali Demir",
+    "Ali İmran Çataklı",
+    "Buğra Öztürk",
+    "Faruk Bastıkoğlu",
+    "Koray Timur",
+    "Mehmet Emin Korkmaz",
+    "Ömer Polat",
+    "Samet Tabakçı"
+  ],
+  "locations": [
+    "DL2",
+    "İkitelli"
+  ],
+  "recipients": [
+    "Ahmet Turan",
+    "Ali demir",
+    "Ali Demir",
+    "Arda Soydaner",
+    "Arzu",
+    "Arzu Yanık",
+    "Atilla Bey IT",
+    "Begüm Gökcan",
+    "Faruk BASTIKOĞLU",
+    "Faruk Bastikoğlu",
+    "Furkan Ceco",
+    "Gülbeden Hanım",
+    "Hüseyin Kocabaş",
+    "Libya Misafir",
+    "Mercedes",
+    "Metal-X İnşaat,Sanayi,Lojistik",
+    "Muhammed Karagöz",
+    "Müşteri",
+    "Ömer polat",
+    "Ömer Polat",
+    "Rasih Atasoy",
+    "Rasih Sefa ATASOY",
+    "Salih Kaplan",
+    "Satış Teknik Destek",
+    "Sedat Bey",
+    "Sinan Şahin",
+    "Talip Deniz",
+    "Test",
+    "Vehbi Koşucu",
+    "Zafer Kaçır"
+  ]
+}

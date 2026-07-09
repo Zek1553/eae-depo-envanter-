@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Depo Envanter</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">EAE</p>
+        <h1>Depo Envanter</h1>
+      </div>
+      <a class="admin-link" href="/admin">Yönetici</a>
+    </header>
+
+    <main class="workspace">
+      <section class="panel form-panel" aria-labelledby="checkout-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Malzeme çıkışı</p>
+            <h2 id="checkout-title">Teslim Kaydı</h2>
+          </div>
+          <span id="selected-count" class="count-chip">0 kalem</span>
+        </div>
+
+        <form id="checkout-form" autocomplete="on">
+          <div class="field-grid">
+            <label>
+              <span>Satışçı</span>
+              <input id="person" name="person" list="people-list" required />
+              <datalist id="people-list"></datalist>
+            </label>
+            <label>
+              <span>Lokasyon</span>
+              <input id="location" name="location" list="location-list" required />
+              <datalist id="location-list"></datalist>
+            </label>
+            <label class="wide">
+              <span>Teslim edilen kişi / firma</span>
+              <input id="recipient" name="recipient" list="recipient-list" required />
+              <datalist id="recipient-list"></datalist>
+            </label>
+            <label class="wide">
+              <span>Not</span>
+              <textarea id="note" name="note" rows="3"></textarea>
+            </label>
+          </div>
+
+          <div class="submit-row">
+            <button class="primary-button" type="submit">Kaydı Tamamla</button>
+            <p id="form-status" class="status-text" role="status"></p>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel inventory-panel" aria-labelledby="inventory-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Stok</p>
+            <h2 id="inventory-title">Malzemeler</h2>
+          </div>
+          <input id="search" class="search-input" type="search" placeholder="Ürün ara" />
+        </div>
+
+        <div id="item-list" class="item-list" aria-live="polite"></div>
+      </section>
+    </main>
+  </body>
+</html>
