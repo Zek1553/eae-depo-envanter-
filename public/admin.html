@@ -10,9 +10,12 @@
   </head>
   <body>
     <header class="topbar">
-      <div>
-        <p class="eyebrow">Yönetici</p>
-        <h1>Depo Envanter</h1>
+      <div class="brand-lockup">
+        <img class="brand-logo" src="/assets/eae-logo.png" alt="EAE Aydınlatma" />
+        <div>
+          <p class="eyebrow">Yönetici</p>
+          <h1>Depo Envanter</h1>
+        </div>
       </div>
       <a class="admin-link" href="/">Kayıt Ekranı</a>
     </header>
@@ -20,9 +23,12 @@
     <main class="admin-workspace">
       <section id="login-panel" class="panel login-panel">
         <div class="panel-heading">
-          <div>
-            <p class="eyebrow">Giriş</p>
-            <h2>Yönetici Kodu</h2>
+          <div class="login-heading">
+            <img class="panel-logo" src="/assets/eae-logo.png" alt="EAE Aydınlatma" />
+            <div>
+              <p class="eyebrow">Giriş</p>
+              <h2>Yönetici Kodu</h2>
+            </div>
           </div>
         </div>
         <form id="login-form" class="inline-form">
@@ -56,7 +62,7 @@
         </section>
 
         <section class="admin-grid">
-          <section class="panel" aria-labelledby="qr-title">
+          <section class="panel qr-panel" aria-labelledby="qr-title">
             <div class="panel-heading">
               <div>
                 <p class="eyebrow">QR</p>
@@ -113,12 +119,16 @@
               <p class="eyebrow">Liste</p>
               <h2 id="stock-title">Stok Kartları</h2>
             </div>
-            <input id="admin-search" class="search-input" type="search" placeholder="Ürün veya kategori ara" />
+            <div class="stock-toolbar">
+              <input id="admin-search" class="search-input" type="search" placeholder="Ürün veya kategori ara" />
+              <button id="bulk-save-stock" class="primary-button" type="button">Toplu Kaydet</button>
+            </div>
           </div>
           <div class="table-wrap">
             <table class="data-table">
               <thead>
                 <tr>
+                  <th>Sıra</th>
                   <th>Ürün</th>
                   <th>Kategori</th>
                   <th>Stok</th>
@@ -134,15 +144,21 @@
         </section>
 
         <section class="admin-grid">
-          <section class="panel" aria-labelledby="moves-title">
+          <section class="panel report-panel" aria-labelledby="moves-title">
             <div class="panel-heading">
               <div>
                 <p class="eyebrow">Hareketler</p>
                 <h2 id="moves-title">Son Kayıtlar</h2>
               </div>
-              <button id="export-csv" class="secondary-button" type="button">CSV</button>
+              <div class="button-row">
+                <button class="tab-button active" data-report-tab="moves" type="button">Son Kayıtlar</button>
+                <button class="tab-button" data-report-tab="person" type="button">Kişi Raporu</button>
+                <button id="export-csv" class="secondary-button" type="button">CSV</button>
+                <button id="export-report-csv" class="secondary-button hidden" type="button">Rapor CSV</button>
+                <button id="print-report" class="secondary-button hidden" type="button">Yazdır</button>
+              </div>
             </div>
-            <div class="table-wrap compact-table">
+            <div id="moves-panel" class="report-tab-panel table-wrap compact-table">
               <table class="data-table">
                 <thead>
                   <tr>
@@ -155,6 +171,31 @@
                 </thead>
                 <tbody id="transaction-table"></tbody>
               </table>
+            </div>
+            <div id="person-report-panel" class="report-tab-panel hidden">
+              <div class="report-toolbar">
+                <label>
+                  <span>Satışçı</span>
+                  <select id="report-person"></select>
+                </label>
+              </div>
+              <div class="chart-layout">
+                <div id="person-pie" class="pie-chart"></div>
+                <div id="person-legend" class="legend-list"></div>
+              </div>
+              <div class="table-wrap report-table-wrap">
+                <table class="data-table report-table">
+                  <thead>
+                    <tr>
+                      <th>Satışçı</th>
+                      <th>Ürün</th>
+                      <th>Kategori</th>
+                      <th>Adet</th>
+                    </tr>
+                  </thead>
+                  <tbody id="person-report-table"></tbody>
+                </table>
+              </div>
             </div>
           </section>
 

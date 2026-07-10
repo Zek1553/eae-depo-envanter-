@@ -9,9 +9,12 @@
   </head>
   <body>
     <header class="topbar">
-      <div>
-        <p class="eyebrow">EAE</p>
-        <h1>Depo Envanter</h1>
+      <div class="brand-lockup">
+        <img class="brand-logo" src="/assets/eae-logo.png" alt="EAE Aydınlatma" />
+        <div>
+          <p class="eyebrow">EAE</p>
+          <h1>Depo Envanter</h1>
+        </div>
       </div>
       <a class="admin-link" href="/admin">Yönetici</a>
     </header>
@@ -26,26 +29,19 @@
           <span id="selected-count" class="count-chip">0 kalem</span>
         </div>
 
-        <form id="checkout-form" autocomplete="on">
+        <form id="checkout-form" autocomplete="off">
           <div class="field-grid">
             <label>
               <span>Satışçı</span>
-              <input id="person" name="person" list="people-list" required />
-              <datalist id="people-list"></datalist>
+              <input id="person" name="person" autocomplete="off" required />
             </label>
             <label>
               <span>Lokasyon</span>
-              <input id="location" name="location" list="location-list" required />
-              <datalist id="location-list"></datalist>
+              <input id="location" name="location" autocomplete="off" required />
             </label>
             <label class="wide">
               <span>Teslim edilen kişi / firma</span>
-              <input id="recipient" name="recipient" list="recipient-list" required />
-              <datalist id="recipient-list"></datalist>
-            </label>
-            <label class="wide">
-              <span>Not</span>
-              <textarea id="note" name="note" rows="3"></textarea>
+              <input id="recipient" name="recipient" autocomplete="off" required />
             </label>
           </div>
 

@@ -16,6 +16,7 @@ const MIME_TYPES = {
   ".css": "text/css; charset=utf-8",
   ".js": "application/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8",
+  ".png": "image/png",
   ".svg": "image/svg+xml; charset=utf-8",
   ".csv": "text/csv; charset=utf-8",
 };
@@ -89,6 +90,22 @@ function uniqueItemId(store, category, name) {
   return id;
 }
 
+function itemOrder(item, index = 0) {
+  const order = Number(item.order);
+  return Number.isFinite(order) ? order : 100000 + index;
+}
+
+function sortItems(items) {
+  return [...items].sort((a, b) =>
+    itemOrder(a) - itemOrder(b) ||
+    `${a.category} ${a.name}`.localeCompare(`${b.category} ${b.name}`, "tr"),
+  );
+}
+
+function nextOrder(store) {
+  return store.items.reduce((max, item, index) => Math.max(max, itemOrder(item, index)), 0) + 10;
+}
+
 function readRequestBody(req) {
   return new Promise((resolve, reject) => {
     let body = "";
@@ -123,16 +140,20 @@ function requirePin(store, pin) {
 function publicCatalog(store) {
   return {
     appName: store.meta.appName,
-    items: store.items.filter((item) => item.active !== false),
-    people: store.people || [],
-    locations: store.locations || [],
-    recipients: store.recipients || [],
+    items: sortItems(store.items)
+      .filter((item) => item.active !== false && Number(item.stock || 0) > 0)
+      .map((item) => ({
+        id: item.id,
+        name: item.name,
+        category: item.category,
+      })),
   };
 }
 
 function buildSummary(store) {
   const todayKey = new Date().toISOString().slice(0, 10);
   const outTransactions = store.transactions.filter((tx) => tx.type === "out");
+  const activeItems = store.items.filter((item) => item.active !== false);
   const todayOut = outTransactions
     .filter((tx) => String(tx.createdAt).slice(0, 10) === todayKey)
     .reduce((sum, tx) => sum + Number(tx.quantity || 0), 0);
@@ -145,9 +166,9 @@ function buildSummary(store) {
   }
 
   return {
-    itemCount: store.items.length,
-    totalStock: store.items.reduce((sum, item) => sum + Number(item.stock || 0), 0),
-    lowStockCount: store.items.filter((item) => Number(item.stock || 0) <= Number(item.minimumStock || 0)).length,
+    itemCount: activeItems.length,
+    totalStock: activeItems.reduce((sum, item) => sum + Number(item.stock || 0), 0),
+    lowStockCount: activeItems.filter((item) => Number(item.stock || 0) <= Number(item.minimumStock || 0)).length,
     todayOut,
     totalOut: outTransactions.reduce((sum, tx) => sum + Number(tx.quantity || 0), 0),
     byPerson: Array.from(byPerson, ([name, quantity]) => ({ name, quantity })).sort((a, b) => b.quantity - a.quantity),
@@ -158,6 +179,7 @@ function buildSummary(store) {
 function adminState(store) {
   return {
     ...store,
+    items: sortItems(store.items),
     summary: buildSummary(store),
     transactions: [...store.transactions].sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt))),
   };
@@ -195,7 +217,6 @@ function handleCheckout(store, body) {
   const person = cleanText(body.person, 120);
   const recipient = cleanText(body.recipient, 160);
   const location = cleanText(body.location, 120);
-  const note = cleanText(body.note, 300);
   const lines = aggregateLines(body.items || body.lines);
 
   if (!person) throw Object.assign(new Error("Satışçı adı gerekli."), { status: 400 });
@@ -225,32 +246,18 @@ function handleCheckout(store, body) {
       person,
       recipient,
       location,
-      note,
+      note: "",
       balanceAfter: check.item.stock,
     });
     store.transactions.push(tx);
     created.push(tx);
   }
 
-  for (const value of [person]) {
-    if (value && !store.people.includes(value)) store.people.push(value);
-  }
-  for (const value of [recipient]) {
-    if (value && !store.recipients.includes(value)) store.recipients.push(value);
-  }
-  for (const value of [location]) {
-    if (value && !store.locations.includes(value)) store.locations.push(value);
-  }
-  store.people.sort((a, b) => a.localeCompare(b, "tr"));
-  store.recipients.sort((a, b) => a.localeCompare(b, "tr"));
-  store.locations.sort((a, b) => a.localeCompare(b, "tr"));
-
   writeStore(store);
   return { ok: true, created };
 }
 
-function handleItemSave(store, body) {
-  requirePin(store, body.pin);
+function applyItemSave(store, body) {
   const name = cleanText(body.name, 140);
   const category = cleanText(body.category, 100);
   if (!name) throw Object.assign(new Error("Ürün adı gerekli."), { status: 400 });
@@ -259,6 +266,7 @@ function handleItemSave(store, body) {
   const stock = Math.max(0, toInt(body.stock, 0));
   const minimumStock = Math.max(0, toInt(body.minimumStock, 0));
   const active = body.active !== false;
+  const order = toInt(body.order, nextOrder(store));
   let item = store.items.find((candidate) => candidate.id === cleanText(body.id, 100));
   const previousStock = item ? Number(item.stock || 0) : 0;
 
@@ -270,6 +278,7 @@ function handleItemSave(store, body) {
       stock,
       minimumStock,
       active,
+      order,
     };
     store.items.push(item);
   } else {
@@ -278,6 +287,7 @@ function handleItemSave(store, body) {
     item.stock = stock;
     item.minimumStock = minimumStock;
     item.active = active;
+    item.order = order;
   }
 
   if (previousStock !== stock) {
@@ -293,9 +303,61 @@ function handleItemSave(store, body) {
     }));
   }
 
-  store.items.sort((a, b) => `${a.category} ${a.name}`.localeCompare(`${b.category} ${b.name}`, "tr"));
+  return item;
+}
+
+function handleItemSave(store, body) {
+  requirePin(store, body.pin);
+  const item = applyItemSave(store, body);
+  store.items = sortItems(store.items);
   writeStore(store);
   return { ok: true, item };
+}
+
+function handleBulkItemSave(store, body) {
+  requirePin(store, body.pin);
+  const items = Array.isArray(body.items) ? body.items : [];
+  if (!items.length) throw Object.assign(new Error("Kaydedilecek ürün bulunamadı."), { status: 400 });
+
+  const saved = items.map((itemBody) => applyItemSave(store, itemBody));
+  store.items = sortItems(store.items);
+  writeStore(store);
+  return { ok: true, count: saved.length, items: saved };
+}
+
+function handleDeleteItem(store, body) {
+  requirePin(store, body.pin);
+  const itemId = cleanText(body.itemId || body.id, 100);
+  const index = store.items.findIndex((candidate) => candidate.id === itemId);
+  if (index === -1) throw Object.assign(new Error("Ürün bulunamadı."), { status: 404 });
+
+  const [item] = store.items.splice(index, 1);
+  store.transactions.push(makeTransaction({
+    type: "delete",
+    item,
+    quantity: 0,
+    person: "Yönetici",
+    recipient: "",
+    location: "",
+    note: "Ürün silindi",
+    balanceAfter: 0,
+  }));
+
+  writeStore(store);
+  return { ok: true };
+}
+
+function handleSortSave(store, body) {
+  requirePin(store, body.pin);
+  const orders = Array.isArray(body.orders) ? body.orders : [];
+  const byId = new Map(store.items.map((item) => [item.id, item]));
+  for (const row of orders) {
+    const item = byId.get(cleanText(row.id, 100));
+    if (item) item.order = toInt(row.order, itemOrder(item));
+  }
+  store.items = sortItems(store.items);
+  writeStore(store);
+  return { ok: true, items: store.items };
 }
 
 function handleAdjust(store, body) {
@@ -446,6 +508,27 @@ async function route(req, res) {
       const store = readStore();
       const body = await readRequestBody(req);
       sendJson(res, 200, handleItemSave(store, body));
+      return;
+    }
+
+    if (req.method === "POST" && pathname === "/api/admin/items/bulk") {
+      const store = readStore();
+      const body = await readRequestBody(req);
+      sendJson(res, 200, handleBulkItemSave(store, body));
+      return;
+    }
+
+    if (req.method === "POST" && pathname === "/api/admin/item/delete") {
+      const store = readStore();
+      const body = await readRequestBody(req);
+      sendJson(res, 200, handleDeleteItem(store, body));
+      return;
+    }
+
+    if (req.method === "POST" && pathname === "/api/admin/sort") {
+      const store = readStore();
+      const body = await readRequestBody(req);
+      sendJson(res, 200, handleSortSave(store, body));
       return;
     }
 
