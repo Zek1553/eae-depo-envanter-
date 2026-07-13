@@ -504,6 +504,10 @@ document.querySelector("#export-csv").addEventListener("click", () => {
   window.location.href = `/api/admin/export.csv?pin=${encodeURIComponent(pin)}`;
 });
 
+document.querySelector("#export-stock-xlsx").addEventListener("click", () => {
+  window.location.href = `/api/admin/stock.xlsx?pin=${encodeURIComponent(pin)}`;
+});
+
 document.querySelector("#export-report-csv").addEventListener("click", () => {
   const { detailRows } = aggregateReport();
   downloadCsv("depo-envanter-kisi-raporu.csv", [
